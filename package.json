@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.coffee",
+  "bin": "build/index.js",
   "scripts": {
-     "build": "npm install && ./node_modules/coffee-script/bin/coffee -o build -c index.coffee && ./node_modules/pkg/lib-es5/bin.js -t node6-linux -d build/index.js -o build/get-ssm-params"
-   },
+    "build": "npm install && ./node_modules/coffee-script/bin/coffee -o build -c index.coffee && ./node_modules/pkg/lib-es5/bin.js . --out-path build"
+  },
   "author": "",
   "license": "GPL-3.0",
   "dependencies": {
