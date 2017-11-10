@@ -3,6 +3,11 @@
 ## Installation
 
 ## Usage
+```
+> echo '{"path":"/dev/grafana"}' | get-ssm-params
+{"ApplicationParameters":"[]"}
+
+```
 
 ## Development
 1. clone the repo
