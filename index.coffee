@@ -27,6 +27,8 @@ process.stdin.on 'end', ->
       returnApplicationParameters [res]
       
   if parsedData.paths?
+    if typeof parsedData.paths == 'string'
+      parsedData.paths = parsedData.paths.split(' ')
     async.mapSeries parsedData.paths, ((path, cb) ->
       getAllParameters path, null, null, cb
       ), (err, res) ->
